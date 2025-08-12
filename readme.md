@@ -1,22 +1,22 @@
-#Ejercicios de programación II - Clase 5/08/2025
+# Ejercicios de programación II - Clase 5/08/2025
 
 En este archivo .md tendra actividades tanto teoricas como practicas sobre git y java.
 
-#Contenido
+# Contenido
 * Actividades teoricas de investigación sobre git
 * Actividades teoricas de investigación sobre java
 * Ejercicios practicos en java (se veran en los archivos de los codigos)
 
 
-#Parte teorica 
+# Parte teorica 
 
-##Git
+## Git
 
 1. ¿Qué es un repositorio en Git y cómo se diferencia de un proyecto “normal”?
 
-    *Un repositorio en git es un espacio donde se puede almacenar un proyecto, donde se puede ver el historial de cambios, diferentes versiones, registros de cambios entre mas cosas, con el fin de poder ver quien realiza cambios y poder revertir estos
+    * Un repositorio en git es un espacio donde se puede almacenar un proyecto, donde se puede ver el historial de cambios, diferentes versiones, registros de cambios entre mas cosas, con el fin de poder ver quien realiza cambios y poder revertir estos
 
-    *La diferencia entre un proyecto normal a uno de git es que un proyecto normal no se puede manejar versiones es decir que al hacer cambios un proyecto normal no guardara el registro para saber que cambios se hicieron lo que causa que para en encontrar los cambios haya que revisar detalladamente el proyecto y cambiarlos manualmente, por otro lado el proyecto en git hace esto automaticamente dando mas facilidad a la hora de hacer cambios
+    * La diferencia entre un proyecto normal a uno de git es que un proyecto normal no se puede manejar versiones es decir que al hacer cambios un proyecto normal no guardara el registro para saber que cambios se hicieron lo que causa que para en encontrar los cambios haya que revisar detalladamente el proyecto y cambiarlos manualmente, por otro lado el proyecto en git hace esto automaticamente dando mas facilidad a la hora de hacer cambios
 
 2. ¿Cuáles son las tres áreas principales de Git (working directory, staging area/index y
 repository) y qué papel cumple cada una?
@@ -138,7 +138,7 @@ El nos muestra informacion detallada de un commit especifico
 **Git reflog**
 Nos muestra el historial reciente de todos los movimientos incluyendo commits eliminados
 
-##Programación
+## Programación
 
 15. ¿Cuáles son los tipos de datos primitivos en Java?
     
