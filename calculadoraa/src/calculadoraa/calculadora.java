@@ -1,6 +1,7 @@
 
 package calculadoraa;
 
+import java.util.logging.Level;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -43,8 +44,8 @@ public class calculadora extends javax.swing.JFrame {
         uno = new javax.swing.JButton();
         tres = new javax.swing.JButton();
         cero = new javax.swing.JButton();
-        punto = new javax.swing.JButton();
         igual = new javax.swing.JButton();
+        punto1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -162,7 +163,7 @@ public class calculadora extends javax.swing.JFrame {
         });
         jPanel2.add(borrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
 
-        borrarUltimo.setFont(new java.awt.Font("Arial Narrow", 0, 17)); // NOI18N
+        borrarUltimo.setFont(new java.awt.Font("Arial Narrow", 0, 15)); // NOI18N
         borrarUltimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Proyecto nuevo (1).jpg"))); // NOI18N
         borrarUltimo.setText("<--");
         borrarUltimo.setFocusPainted(false);
@@ -176,7 +177,7 @@ public class calculadora extends javax.swing.JFrame {
         });
         jPanel2.add(borrarUltimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 50, 50));
 
-        porcentaje.setFont(new java.awt.Font("Arial Narrow", 0, 22)); // NOI18N
+        porcentaje.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         porcentaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Proyecto nuevo (1).jpg"))); // NOI18N
         porcentaje.setText("%");
         porcentaje.setFocusPainted(false);
@@ -330,20 +331,6 @@ public class calculadora extends javax.swing.JFrame {
         });
         jPanel2.add(cero, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 50, 50));
 
-        punto.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
-        punto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Proyecto nuevo (1).jpg"))); // NOI18N
-        punto.setText(".");
-        punto.setFocusPainted(false);
-        punto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        punto.setPreferredSize(new java.awt.Dimension(50, 50));
-        punto.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Proyecto nuevo.jpg"))); // NOI18N
-        punto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                puntoActionPerformed(evt);
-            }
-        });
-        jPanel2.add(punto, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 50, 50));
-
         igual.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         igual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Proyecto nuevo (1).jpg"))); // NOI18N
         igual.setText("=");
@@ -358,6 +345,20 @@ public class calculadora extends javax.swing.JFrame {
         });
         jPanel2.add(igual, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 50, 50));
 
+        punto1.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        punto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Proyecto nuevo (1).jpg"))); // NOI18N
+        punto1.setText(".");
+        punto1.setFocusPainted(false);
+        punto1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        punto1.setPreferredSize(new java.awt.Dimension(50, 50));
+        punto1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Proyecto nuevo.jpg"))); // NOI18N
+        punto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                punto1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(punto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 50, 50));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 340, 400));
 
         pack();
@@ -365,22 +366,18 @@ public class calculadora extends javax.swing.JFrame {
 
     private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
         agregarNumero("*");
-
     }//GEN-LAST:event_multiplicacionActionPerformed
 
     private void masActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masActionPerformed
         agregarNumero("+");
-
     }//GEN-LAST:event_masActionPerformed
 
     private void ochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ochoActionPerformed
         agregarNumero("8");
-        igual.doClick();
     }//GEN-LAST:event_ochoActionPerformed
 
     private void nueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueveActionPerformed
         agregarNumero("9");
-        igual.doClick();
     }//GEN-LAST:event_nueveActionPerformed
 
     private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
@@ -393,7 +390,7 @@ public class calculadora extends javax.swing.JFrame {
 
         String texto = txtOperacion.getText().substring(0,txtOperacion.getText().length()-1);
         txtOperacion.setText(texto);
-        //igual.doClick();
+        
 
     }//GEN-LAST:event_borrarUltimoActionPerformed
 
@@ -409,22 +406,22 @@ public class calculadora extends javax.swing.JFrame {
 
     private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
         agregarNumero("7");
-        igual.doClick();
+        
     }//GEN-LAST:event_sieteActionPerformed
 
     private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
         agregarNumero("4");
-        igual.doClick();
+        
     }//GEN-LAST:event_cuatroActionPerformed
 
     private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
         agregarNumero("5");
-        igual.doClick();
+        
     }//GEN-LAST:event_cincoActionPerformed
 
     private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
         agregarNumero("6");
-        igual.doClick();
+      
     }//GEN-LAST:event_seisActionPerformed
 
     private void menosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menosActionPerformed
@@ -434,39 +431,38 @@ public class calculadora extends javax.swing.JFrame {
 
     private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
         agregarNumero("2");
-        igual.doClick();
+       
     }//GEN-LAST:event_dosActionPerformed
 
     private void unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoActionPerformed
         agregarNumero("1");
-        igual.doClick();
+        
     }//GEN-LAST:event_unoActionPerformed
 
     private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
         agregarNumero("3");
-        igual.doClick();
+        
     }//GEN-LAST:event_tresActionPerformed
 
     private void ceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceroActionPerformed
         agregarNumero("0");
-        igual.doClick();
+        
     }//GEN-LAST:event_ceroActionPerformed
 
-    private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
-        agregarNumero(".");
-        igual.doClick();
-    }//GEN-LAST:event_puntoActionPerformed
-
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
-
         try {
-            String Resultado = calcular.eval(txtOperacion.getText()).toString();
-            txtResultado.setText(Resultado);
-        } catch (ScriptException ex) {
-            System.getLogger(Calculadoraa.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
-            txtOperacion.setText("ERROR");
-        }
+        String operacion = txtOperacion.getText();
+        String resultado = calcular.eval(operacion).toString();
+        txtResultado.setText(resultado);
+    } catch (ScriptException ex) {
+        logger.log(Level.SEVERE, "Error en la operaci\u00f3n: {0}", ex.getMessage());
+        txtResultado.setText("");
+    }
     }//GEN-LAST:event_igualActionPerformed
+
+    private void punto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_punto1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_punto1ActionPerformed
 
     
     public static void main(String args[]) {
@@ -500,7 +496,7 @@ public class calculadora extends javax.swing.JFrame {
     private javax.swing.JButton nueve;
     private javax.swing.JButton ocho;
     private javax.swing.JButton porcentaje;
-    private javax.swing.JButton punto;
+    private javax.swing.JButton punto1;
     private javax.swing.JButton seis;
     private javax.swing.JButton siete;
     private javax.swing.JButton tres;
